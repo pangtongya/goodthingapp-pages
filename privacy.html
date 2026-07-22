@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>好事来 - 隐私政策</title>
+    <title>好事来 - 隐私政策 / Good Things - Privacy Policy</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -51,49 +51,200 @@
             padding-top: 20px;
             border-top: 1px solid #eee;
         }
+        .lang-switch {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            gap: 4px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+            padding: 4px;
+            z-index: 100;
+        }
+        .lang-switch button {
+            border: none;
+            background: transparent;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+        }
+        .lang-switch button.active {
+            background: #007AFF;
+            color: #fff;
+        }
+        [data-lang="en"] {
+            display: none;
+        }
+        body.lang-en [data-lang="zh"] {
+            display: none;
+        }
+        body.lang-en [data-lang="en"] {
+            display: block;
+        }
+        body.lang-en {
+            lang: "en";
+        }
     </style>
 </head>
 <body>
-    <h1>隐私政策</h1>
-    
-    <p>欢迎使用「好事来」App（以下简称「本应用」）。我们非常重视您的隐私保护，本隐私政策旨在说明本应用如何收集、使用、存储和保护您的个人信息。</p>
-
-    <h2>1. 信息收集</h2>
-    <p>本应用不会收集、存储或传输任何用户个人身份信息。所有数据均仅存储在您的设备本地，您可以随时查看、修改或删除这些数据。</p>
-    <ul>
-        <li><strong>记录数据：</strong>您创建的「好事」记录（包括文字内容、心情标签、日期等）仅存储在您的设备上，不会上传至任何服务器。</li>
-        <li><strong>iCloud 同步（可选）：</strong>如果您开启了 iCloud 同步功能，您的记录数据会通过 Apple 的 iCloud 服务同步到您的其他设备。此过程由 Apple 处理，我们无法访问您的 iCloud 数据。</li>
-        <li><strong>设备信息：</strong>本应用可能收集设备类型、操作系统版本等非身份识别信息，用于优化应用性能和兼容性。</li>
-    </ul>
-
-    <h2>2. 信息使用</h2>
-    <p>本应用收集的信息仅用于以下目的：</p>
-    <ul>
-        <li>提供和维护应用的核心功能</li>
-        <li>优化应用性能和用户体验</li>
-        <li>提供客户支持和技术帮助</li>
-    </ul>
-
-    <h2>3. 信息共享</h2>
-    <p>本应用不会向任何第三方分享、出售或出租您的个人信息。所有数据始终归您所有。</p>
-
-    <h2>4. 数据安全</h2>
-    <p>我们采用行业标准的安全措施来保护您的数据：</p>
-    <ul>
-        <li>数据加密存储</li>
-        <li>安全的数据传输协议（如适用）</li>
-        <li>定期安全更新</li>
-    </ul>
-
-    <h2>5. 隐私政策变更</h2>
-    <p>我们可能会不时更新本隐私政策。当有重大变更时，我们会通过应用内通知或其他适当方式通知您。</p>
-
-    <h2>6. 联系我们</h2>
-    <p>如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</p>
-    <p>邮箱：<a href="mailto:pongtom@qq.com" class="contact">pongtom@qq.com</a></p>
-
-    <div class="last-updated">
-        最后更新：2026年7月14日
+    <div class="lang-switch">
+        <button onclick="switchLang('zh')" id="btn-zh">中文</button>
+        <button onclick="switchLang('en')" id="btn-en">EN</button>
     </div>
+
+    <div data-lang="zh">
+        <h1>隐私政策</h1>
+        <p>欢迎使用「好事来」App（以下简称「本应用」）。我们非常重视您的隐私保护，本隐私政策旨在说明本应用如何收集、使用、存储和保护您的个人信息。</p>
+        <h2>1. 信息收集</h2>
+        <p>本应用不收集任何用于追踪用户的个人身份信息，也不进行任何跨应用追踪。为了实现 App 核心功能，本应用会在设备本地处理以下类型的数据（与 PrivacyInfo.xcprivacy 中 NSPrivacyCollectedDataTypes 声明一致）：用户创建的记录内容（文字、心情、标签）、用于分享与保存的相片/视频、通知偏好设置，以及产品交互数据（如 IAP 购买状态）。上述数据仅用于 App 功能本身，不与用户身份关联，不上传至开发者运营的服务器，不用于追踪。所有数据均仅存储在您的设备本地或您的个人 iCloud 容器中，您可以随时查看、修改或删除这些数据。</p>
+        <ul>
+            <li><strong>记录数据：</strong>您创建的「好事」记录（包括文字内容、心情标签、日期等）仅存储在您的设备上，不会上传至任何由开发者运营的服务器。</li>
+            <li><strong>iCloud 同步（可选）：</strong>如果您开启了 iCloud 同步功能，您的记录数据会通过 Apple 的 iCloud 服务同步到您的其他设备。此过程由 Apple 处理，我们无法访问您的 iCloud 数据。</li>
+        </ul>
+        <h2>2. 权限与能力说明</h2>
+        <p>本应用在以下场景中请求或使用系统权限与能力，所有权限均仅在用户主动调用相关功能时启用，您可在系统设置中随时撤回授权。</p>
+        <ul>
+            <li><strong>Face ID / Touch ID（生物识别）：</strong>用于解锁本应用，确保只有您本人可查看记录。生物特征数据由 iOS Secure Enclave 加密保护，<strong>仅保存在设备本地，不离开设备，也不被本应用读取或上传</strong>。</li>
+            <li><strong>麦克风：</strong>用于语音输入记录功能，仅在您主动调用语音输入时启用。音频数据不会被保存或上传，仅在当前会话中处理。</li>
+            <li><strong>语音识别：</strong>用于将语音转换为文字，仅在您主动调用语音转文字功能时启用。识别请求由 Apple Speech 框架处理，本应用不接触原始音频数据。</li>
+            <li><strong>本地通知：</strong>用于每日提醒、周报、月报、纪念日提醒、回收站过期提醒等通知场景。所有通知均为本地通知，<strong>不涉及推送服务器，不收集任何推送 token</strong>。</li>
+            <li><strong>StoreKit 内购：</strong>订阅与一次性购买均通过 Apple StoreKit 2 处理，交易由 Apple 完成并加密，<strong>开发者不接触任何支付卡或账单信息</strong>。订阅状态通过 App Group 同步至 Widget，仅用于显示是否为 Pro 用户。</li>
+            <li><strong>App Group 共享：</strong>本应用使用 App Group（<code>group.com.goodthingapp.GoodThingApp</code>）在主 App 与 Widget 之间共享 Pro 状态和记录数据。该共享容器仅由本应用的两个组件访问，不向第三方开放。</li>
+            <li><strong>URL Scheme：</strong>本应用注册了 URL Scheme <code>goodthing://</code>，用于从其他 App 或网页跳转至本应用的特定页面。该 Scheme 不传输任何个人信息。</li>
+            <li><strong>Widget Extension：</strong>桌面小组件（Widget）通过 App Group 共享容器读取记录数据和 Pro 状态，<strong>仅读取，不写入</strong>，不会修改任何数据。</li>
+            <li><strong>iCloud 同步：</strong>Pro 用户可开启 iCloud 同步，使用 iCloud 容器 <code>iCloud.com.goodthingapp.GoodThingApp</code> 在您的多个设备间同步记录数据。该容器为您的个人 iCloud 私有空间，共享范围仅限您登录同一 Apple ID 的设备。开发者无法访问容器内容，您可在 iOS「设置 - Apple ID - iCloud - 管理账户存储」中查看或删除同步数据。</li>
+            <li><strong>相册：</strong>用于将分享卡片保存到您的相册，<strong>仅具有写入权限，不读取相册中的任何内容</strong>。</li>
+        </ul>
+        <h2>3. 第三方 SDK</h2>
+        <p>本应用<strong>不使用任何第三方分析、广告或追踪 SDK</strong>，不进行任何跨应用追踪或用户画像。本应用仅使用 Apple 原生框架，包括但不限于：</p>
+        <ul>
+            <li>StoreKit（内购与订阅管理）</li>
+            <li>CloudKit（iCloud 同步）</li>
+            <li>WidgetKit（桌面小组件）</li>
+            <li>UserNotifications（本地通知）</li>
+            <li>Speech（语音识别）</li>
+            <li>LocalAuthentication（Face ID / Touch ID）</li>
+            <li>Photos（保存到相册）</li>
+        </ul>
+        <p>上述框架均由 Apple 提供并在系统层面运行，相关数据处理遵循 Apple 的隐私规范。</p>
+        <h2>4. 信息使用</h2>
+        <p>本应用所处理的任何数据仅用于以下目的：</p>
+        <ul>
+            <li>提供和维护应用的核心功能（记录、提醒、统计、同步等）</li>
+            <li>响应您的主动操作（语音输入、保存卡片、订阅 Pro 等）</li>
+            <li>通过 Widget 与 App 间共享数据以提供桌面小组件体验</li>
+        </ul>
+        <h2>5. 信息共享</h2>
+        <p>本应用不会向任何第三方分享、出售或出租您的个人信息。所有数据始终归您所有。iCloud 同步仅在您个人的 Apple ID 范围内进行，不涉及任何第三方。</p>
+        <h2>6. 数据安全</h2>
+        <p>我们采用行业标准的安全措施来保护您的数据：</p>
+        <ul>
+            <li>本地数据加密存储</li>
+            <li>iCloud 同步通过 Apple 端到端加密传输</li>
+            <li>App Group 共享容器受 iOS 沙盒保护</li>
+            <li>生物特征数据由 Secure Enclave 硬件加密保护</li>
+        </ul>
+        <h2>7. 数据保留与删除</h2>
+        <p>您对自己的数据拥有完全控制权：</p>
+        <ul>
+            <li><strong>App 内删除：</strong>您可在应用内随时删除单条记录、清空回收站或删除全部记录，操作不可恢复。</li>
+            <li><strong>卸载 App：</strong>卸载本应用将删除存储在设备本地的所有数据。</li>
+            <li><strong>iCloud 数据管理：</strong>已同步至 iCloud 的记录数据可在 iOS「设置 - Apple ID - iCloud - 管理账户存储 - 好事来」中查看和删除，或通过关闭 iCloud 同步功能停止后续同步。</li>
+            <li><strong>撤回权限：</strong>您可在 iOS「设置 - 好事来」中随时关闭麦克风、语音识别、通知、相册、Face ID 等权限，撤回后相关功能将不可用，但不影响其他功能。</li>
+        </ul>
+        <h2>8. 隐私政策变更</h2>
+        <p>我们可能会不时更新本隐私政策。每次更新会递增版本号（见文末「隐私政策版本」）。当有重大变更时，我们会通过应用内通知或其他适当方式通知您。继续使用本应用即表示您同意更新后的隐私政策。</p>
+        <h2>9. 联系我们</h2>
+        <p>如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</p>
+        <p>邮箱：<a href="mailto:pangtong@qq.com" class="contact">pangtong@qq.com</a></p>
+        <div class="last-updated">隐私政策版本：v1.0<br>最后更新：2026年7月18日</div>
+    </div>
+
+    <div data-lang="en">
+        <h1>Privacy Policy</h1>
+        <p>Welcome to Good Things (the "App"). We take your privacy seriously. This Privacy Policy explains how we collect, use, store, and protect your personal information.</p>
+        <h2>1. Information Collection</h2>
+        <p>The App does not collect any personally identifiable information for tracking purposes, nor does it perform any cross-app tracking. To deliver core app functionality, the App processes the following data types locally on the device (consistent with the NSPrivacyCollectedDataTypes declaration in PrivacyInfo.xcprivacy): user-created record content (text, mood, tags), photos/videos used for sharing and saving, notification preference settings, and product interaction data (such as IAP purchase status). This data is used solely for app functionality, is not linked to user identity, is not uploaded to any developer-operated server, and is not used for tracking. All data is stored only on your device or in your personal iCloud container, and you can view, modify, or delete it at any time.</p>
+        <ul>
+            <li><strong>Record Data:</strong> The "good things" entries you create (including text content, mood tags, dates, etc.) are stored only on your device and are never uploaded to any developer-operated server.</li>
+            <li><strong>iCloud Sync (Optional):</strong> If you enable iCloud sync, your records are synced to your other devices via Apple's iCloud service. This process is handled by Apple, and we cannot access your iCloud data.</li>
+        </ul>
+        <h2>2. Permissions &amp; Capabilities</h2>
+        <p>The App requests or uses system permissions and capabilities only in the following scenarios, and only when you actively invoke the relevant features. You may revoke any permission at any time in system Settings.</p>
+        <ul>
+            <li><strong>Face ID / Touch ID (Biometrics):</strong> Used to unlock the App so that only you can view your records. Biometric data is encrypted and protected by the iOS Secure Enclave. <strong>It is stored only on-device, never leaves the device, and is never read or uploaded by the App.</strong></li>
+            <li><strong>Microphone:</strong> Used for voice input when composing a record. It is enabled only when you actively invoke voice input. Audio data is not saved or uploaded; it is processed only within the current session.</li>
+            <li><strong>Speech Recognition:</strong> Used to convert speech to text, enabled only when you actively invoke the speech-to-text feature. Recognition requests are handled by the Apple Speech framework, and the App does not access the raw audio data.</li>
+            <li><strong>Local Notifications:</strong> Used for daily reminders, weekly reports, monthly reports, anniversary reminders, and trash-bin expiration reminders. All notifications are local. <strong>No push server is involved, and no push tokens are collected.</strong></li>
+            <li><strong>StoreKit In-App Purchase:</strong> Subscriptions and one-time purchases are processed via Apple StoreKit 2. Transactions are completed and encrypted by Apple. <strong>The developer never touches any payment card or billing information.</strong> Subscription status is synced to the Widget via App Group only to determine whether you are a Pro user.</li>
+            <li><strong>App Group Sharing:</strong> The App uses an App Group (<code>group.com.goodthingapp.GoodThingApp</code>) to share Pro status and record data between the main App and the Widget. This shared container is accessed only by these two components of the App and is not exposed to any third party.</li>
+            <li><strong>URL Scheme:</strong> The App registers the URL Scheme <code>goodthing://</code> for launching specific pages from other apps or web pages. This scheme does not transmit any personal information.</li>
+            <li><strong>Widget Extension:</strong> The home-screen Widget reads record data and Pro status from the App Group shared container. <strong>It is read-only and never writes data.</strong></li>
+            <li><strong>iCloud Sync:</strong> Pro users may enable iCloud sync, which uses the iCloud container <code>iCloud.com.goodthingapp.GoodThingApp</code> to sync records across your devices. The container is your personal private iCloud space, and the sync scope is limited to devices signed in with the same Apple ID. The developer cannot access the container contents. You can view or delete synced data in iOS Settings &gt; Apple ID &gt; iCloud &gt; Manage Account Storage.</li>
+            <li><strong>Photos:</strong> Used to save sharing cards to your photo library. <strong>It has write-only access and does not read any content from your photo library.</strong></li>
+        </ul>
+        <h2>3. Third-Party SDKs</h2>
+        <p>The App <strong>does not use any third-party analytics, advertising, or tracking SDKs</strong>, and does not perform any cross-app tracking or user profiling. The App only uses Apple-native frameworks, including but not limited to:</p>
+        <ul>
+            <li>StoreKit (in-app purchase and subscription management)</li>
+            <li>CloudKit (iCloud sync)</li>
+            <li>WidgetKit (home-screen widgets)</li>
+            <li>UserNotifications (local notifications)</li>
+            <li>Speech (speech recognition)</li>
+            <li>LocalAuthentication (Face ID / Touch ID)</li>
+            <li>Photos (saving to photo library)</li>
+        </ul>
+        <p>These frameworks are provided by Apple and operate at the system level. Their data processing follows Apple's privacy specifications.</p>
+        <h2>4. Information Use</h2>
+        <p>Any data processed by the App is used solely for the following purposes:</p>
+        <ul>
+            <li>Providing and maintaining core app functionality (recording, reminders, statistics, sync, etc.)</li>
+            <li>Responding to your active actions (voice input, saving cards, subscribing to Pro, etc.)</li>
+            <li>Sharing data between the App and the Widget to provide the home-screen widget experience</li>
+        </ul>
+        <h2>5. Information Sharing</h2>
+        <p>The App does not share, sell, or rent your personal information to any third party. All data belongs to you. iCloud sync takes place only within your personal Apple ID and does not involve any third party.</p>
+        <h2>6. Data Security</h2>
+        <p>We employ industry-standard security measures to protect your data:</p>
+        <ul>
+            <li>Encrypted local data storage</li>
+            <li>iCloud sync via Apple's end-to-end encryption</li>
+            <li>App Group shared containers protected by the iOS sandbox</li>
+            <li>Biometric data protected by Secure Enclave hardware encryption</li>
+        </ul>
+        <h2>7. Data Retention &amp; Deletion</h2>
+        <p>You have full control over your data:</p>
+        <ul>
+            <li><strong>In-App Deletion:</strong> You can delete individual records, empty the trash bin, or delete all records at any time within the App. These actions are irreversible.</li>
+            <li><strong>Uninstalling the App:</strong> Uninstalling the App will delete all data stored locally on the device.</li>
+            <li><strong>iCloud Data Management:</strong> Records synced to iCloud can be viewed and deleted in iOS Settings &gt; Apple ID &gt; iCloud &gt; Manage Account Storage &gt; Good Things, or you can turn off iCloud sync to stop further syncing.</li>
+            <li><strong>Revoking Permissions:</strong> You can revoke permissions such as Microphone, Speech Recognition, Notifications, Photos, and Face ID at any time in iOS Settings &gt; Good Things. Revoking a permission disables the related feature but does not affect other features.</li>
+        </ul>
+        <h2>8. Privacy Policy Changes</h2>
+        <p>We may update this Privacy Policy from time to time. Each update will increment the version number (see "Privacy Policy Version" at the bottom). When significant changes occur, we will notify you via in-app notifications or other appropriate means. Continued use of the App constitutes your agreement to the updated Privacy Policy.</p>
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions or suggestions about this Privacy Policy, please contact us at:</p>
+        <p>Email: <a href="mailto:pangtong@qq.com" class="contact">pangtong@qq.com</a></p>
+        <div class="last-updated">Privacy Policy Version: v1.0<br>Last updated: July 18, 2026</div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.body.className = lang === 'en' ? 'lang-en' : '';
+            document.getElementById('btn-zh').className = lang === 'zh' ? 'active' : '';
+            document.getElementById('btn-en').className = lang === 'en' ? 'active' : '';
+            document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+        }
+        var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        if (!browserLang.startsWith('zh')) {
+            switchLang('en');
+        } else {
+            switchLang('zh');
+        }
+    </script>
 </body>
 </html>

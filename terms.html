@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好事来 - 用户协议 / Good Things - Terms of Service</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+        }
+        h1 {
+            color: #007AFF;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .contact {
+            color: #007AFF;
+            text-decoration: none;
+        }
+        .contact:hover {
+            text-decoration: underline;
+        }
+        .last-updated {
+            color: #888;
+            font-size: 14px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .lang-switch {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            gap: 4px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+            padding: 4px;
+            z-index: 100;
+        }
+        .lang-switch button {
+            border: none;
+            background: transparent;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+        }
+        .lang-switch button.active {
+            background: #007AFF;
+            color: #fff;
+        }
+        [data-lang="en"] {
+            display: none;
+        }
+        body.lang-en [data-lang="zh"] {
+            display: none;
+        }
+        body.lang-en [data-lang="en"] {
+            display: block;
+        }
+        body.lang-en {
+            lang: "en";
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <button onclick="switchLang('zh')" id="btn-zh">中文</button>
+        <button onclick="switchLang('en')" id="btn-en">EN</button>
+    </div>
+
+    <div data-lang="zh">
+        <h1>用户协议</h1>
+        <p>欢迎使用「好事来」App（以下简称「本应用」）。请在使用本应用前仔细阅读以下用户协议（以下简称「本协议」）。下载、安装或使用本应用即表示您同意接受本协议的全部条款。</p>
+        <h2>1. 服务说明</h2>
+        <p>本应用是一款感恩日记与好事记录工具，提供记录、统计、提醒、iCloud 同步、桌面小组件等功能。Pro 会员可解锁更多高级功能，包括但不限于无限记录、补录、编辑、iCloud 同步、回收站恢复、PDF 导出、年度统计等。</p>
+        <h2>2. 用户账户</h2>
+        <p>本应用不需要注册账户。您的身份通过您的 Apple ID 与 StoreKit 内购记录识别。订阅与一次性购买均通过 Apple StoreKit 2 完成，相关交易条款以 Apple 的《App Store 条款》为准。</p>
+        <h2>3. 用户内容</h2>
+        <p>您在本应用中创建的所有记录（包括文字、心情标签、日期等）均属于您本人。您对自己的内容负全部责任。我们不会对您的内容进行任何审核、修改或传播。您可在应用内随时导出、修改或删除您的内容。</p>
+        <h2>4. 订阅与付款</h2>
+        <ul>
+            <li><strong>订阅类型：</strong>本应用提供月度订阅、年度订阅（含 7 天免费试用）和终身一次性买断三种 Pro 方案。</li>
+            <li><strong>自动续费：</strong>订阅会自动续费，除非在当前订阅期结束前至少 24 小时在 App Store 账户设置中关闭自动续费。</li>
+            <li><strong>扣款：</strong>续费将在当前订阅期结束前 24 小时内从您的 Apple ID 账户扣款，扣款金额以 App Store 实际显示的价格为准。</li>
+            <li><strong>退款：</strong>所有付款通过 Apple 处理，退款申请请直接联系 Apple 客服或访问 reportaproblem.apple.com。</li>
+            <li><strong>试用：</strong>首次订阅年度方案可享受 7 天免费试用。试用结束后将自动扣款，除非在试用结束前取消。</li>
+        </ul>
+        <h2>5. 使用规范</h2>
+        <p>您同意不会将本应用用于任何违法或未经授权的用途，包括但不限于：</p>
+        <ul>
+            <li>逆向工程、反编译或反汇编本应用</li>
+            <li>绕过或破坏本应用的安全机制、付费墙或权限校验</li>
+            <li>利用本应用传播违法、侵权或有害内容</li>
+            <li>干扰本应用的正常运行或其他用户的使用</li>
+        </ul>
+        <h2>6. 知识产权</h2>
+        <p>本应用的源代码、设计、图标、文案等所有内容（除您自行创建的记录外）的知识产权归本应用开发者所有，受相关法律保护。未经书面许可，不得复制、修改、传播或用于任何商业用途。</p>
+        <h2>7. 免责声明</h2>
+        <p>本应用按"现状"提供，开发者不对本应用的可用性、准确性或适用性作出任何明示或暗示的保证。在法律允许的范围内，开发者不对因使用或无法使用本应用而造成的任何直接或间接损失承担责任。</p>
+        <h2>8. 协议变更</h2>
+        <p>我们可能会不时更新本协议。当有重大变更时，我们会通过应用内通知或其他适当方式通知您。继续使用本应用即表示您同意更新后的协议。</p>
+        <h2>9. 适用法律</h2>
+        <p>本协议的解释与争议解决适用中华人民共和国法律（不含香港、澳门及台湾地区法律）。</p>
+        <h2>10. 联系我们</h2>
+        <p>如果您对本协议有任何疑问或建议，请通过以下方式联系我们：</p>
+        <p>邮箱：<a href="mailto:pangtong@qq.com" class="contact">pangtong@qq.com</a></p>
+        <div class="last-updated">最后更新：2026年7月18日</div>
+    </div>
+
+    <div data-lang="en">
+        <h1>Terms of Service</h1>
+        <p>Welcome to Good Things (the "App"). Please read the following Terms of Service (the "Terms") carefully before using the App. By downloading, installing, or using the App, you agree to be bound by these Terms.</p>
+        <h2>1. Service Description</h2>
+        <p>The App is a gratitude journal and good-things recording tool that provides features such as recording, statistics, reminders, iCloud sync, and home-screen widgets. Pro members can unlock additional advanced features, including but not limited to unlimited records, backdating, editing, iCloud sync, trash-bin recovery, PDF export, annual statistics, and more.</p>
+        <h2>2. User Account</h2>
+        <p>The App does not require account registration. Your identity is identified via your Apple ID and StoreKit in-app purchase records. Subscriptions and one-time purchases are completed via Apple StoreKit 2, and the relevant transaction terms are governed by Apple's App Store Terms and Conditions.</p>
+        <h2>3. User Content</h2>
+        <p>All records you create in the App (including text, mood tags, dates, etc.) belong to you. You are solely responsible for your content. We do not review, modify, or distribute your content. You may export, modify, or delete your content at any time within the App.</p>
+        <h2>4. Subscriptions &amp; Payments</h2>
+        <ul>
+            <li><strong>Subscription Types:</strong> The App offers three Pro plans: Monthly Subscription, Annual Subscription (with a 7-day free trial), and Lifetime One-Time Purchase.</li>
+            <li><strong>Auto-Renewal:</strong> Subscriptions automatically renew unless auto-renewal is turned off at least 24 hours before the end of the current subscription period in your App Store account settings.</li>
+            <li><strong>Billing:</strong> Renewal charges will be deducted from your Apple ID account within 24 hours before the end of the current subscription period. The actual amount charged is the price displayed in the App Store.</li>
+            <li><strong>Refunds:</strong> All payments are processed by Apple. For refund requests, please contact Apple Customer Service or visit reportaproblem.apple.com.</li>
+            <li><strong>Trial:</strong> First-time annual subscribers are eligible for a 7-day free trial. The trial automatically converts to a paid subscription unless canceled before the trial ends.</li>
+        </ul>
+        <h2>5. Acceptable Use</h2>
+        <p>You agree not to use the App for any illegal or unauthorized purpose, including but not limited to:</p>
+        <ul>
+            <li>Reverse engineering, decompiling, or disassembling the App</li>
+            <li>Bypassing or breaking the App's security mechanisms, paywall, or permission checks</li>
+            <li>Using the App to distribute illegal, infringing, or harmful content</li>
+            <li>Interfering with the normal operation of the App or other users' experience</li>
+        </ul>
+        <h2>6. Intellectual Property</h2>
+        <p>The intellectual property rights of all content in the App (except for the records you create yourself), including source code, design, icons, and copy, belong to the App's developer and are protected by applicable laws. Without written permission, you may not copy, modify, distribute, or use them for any commercial purpose.</p>
+        <h2>7. Disclaimer</h2>
+        <p>The App is provided "as is," and the developer makes no express or implied warranties regarding the availability, accuracy, or suitability of the App. To the extent permitted by law, the developer shall not be liable for any direct or indirect losses arising from the use of or inability to use the App.</p>
+        <h2>8. Changes to These Terms</h2>
+        <p>We may update these Terms from time to time. When significant changes occur, we will notify you via in-app notifications or other appropriate means. Continued use of the App constitutes your agreement to the updated Terms.</p>
+        <h2>9. Governing Law</h2>
+        <p>These Terms are governed by and construed in accordance with the laws of the People's Republic of China (excluding the laws of Hong Kong, Macau, and Taiwan).</p>
+        <h2>10. Contact Us</h2>
+        <p>If you have any questions or suggestions about these Terms, please contact us at:</p>
+        <p>Email: <a href="mailto:pangtong@qq.com" class="contact">pangtong@qq.com</a></p>
+        <div class="last-updated">Last updated: July 18, 2026</div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.body.className = lang === 'en' ? 'lang-en' : '';
+            document.getElementById('btn-zh').className = lang === 'zh' ? 'active' : '';
+            document.getElementById('btn-en').className = lang === 'en' ? 'active' : '';
+            document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+        }
+        var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        if (!browserLang.startsWith('zh')) {
+            switchLang('en');
+        } else {
+            switchLang('zh');
+        }
+    </script>
+</body>
+</html>

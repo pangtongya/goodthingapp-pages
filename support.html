@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>好事来 - 帮助与支持</title>
+    <title>好事来 - 帮助与支持 / Good Things - Help & Support</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -67,68 +67,167 @@
             color: #007AFF;
             margin-bottom: 8px;
         }
+        .lang-switch {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            gap: 4px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+            padding: 4px;
+            z-index: 100;
+        }
+        .lang-switch button {
+            border: none;
+            background: transparent;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+        }
+        .lang-switch button.active {
+            background: #007AFF;
+            color: #fff;
+        }
+        [data-lang="en"] {
+            display: none;
+        }
+        body.lang-en [data-lang="zh"] {
+            display: none;
+        }
+        body.lang-en [data-lang="en"] {
+            display: block;
+        }
     </style>
 </head>
 <body>
-    <h1>帮助与支持</h1>
-    
-    <p>欢迎来到「好事来」帮助中心！这里提供使用指南、常见问题解答和联系方式。</p>
-
-    <h2>功能介绍</h2>
-    
-    <div class="feature-box">
-        <div class="feature-title">📝 记录好事</div>
-        <p>每天记录一件好事，只需要3秒。点击首页右下角的蓝色加号按钮，输入内容即可完成记录。</p>
+    <div class="lang-switch">
+        <button onclick="switchLang('zh')" id="btn-zh">中文</button>
+        <button onclick="switchLang('en')" id="btn-en">EN</button>
     </div>
 
-    <div class="feature-box">
-        <div class="feature-title">📊 回顾统计</div>
-        <p>在「回顾」页面查看您的记录统计，包括心情分布、连续记录天数、月度趋势等数据可视化。</p>
+    <div data-lang="zh">
+        <h1>帮助与支持</h1>
+        <p>欢迎来到「好事来」帮助中心！这里提供使用指南、常见问题解答和联系方式。</p>
+
+        <h2>功能介绍</h2>
+        <div class="feature-box">
+            <div class="feature-title">📝 记录好事</div>
+            <p>每天记录一件好事，只需要3秒。点击首页右下角的蓝色加号按钮，输入内容即可完成记录。</p>
+        </div>
+        <div class="feature-box">
+            <div class="feature-title">📊 回顾统计</div>
+            <p>在「回顾」页面查看您的记录统计，包括心情分布、连续记录天数、月度趋势等数据可视化。</p>
+        </div>
+        <div class="feature-box">
+            <div class="feature-title">📅 日历视图</div>
+            <p>在「日历」页面以日历形式浏览您的所有记录，轻松回顾过去的美好时光。</p>
+        </div>
+        <div class="feature-box">
+            <div class="feature-title">✨ Pro 版权益</div>
+            <p>升级到 Pro 版可以享受无限记录、iCloud 同步、PDF 导出、桌面小组件等高级功能。</p>
+        </div>
+
+        <h2>常见问题</h2>
+        <div class="faq-item">
+            <div class="faq-question">Q: 我的数据安全吗？</div>
+            <div class="faq-answer">A: 非常安全！所有数据仅存储在您的设备上，我们不会收集或传输任何用户数据。开启 iCloud 同步后，数据仅通过 Apple 的安全通道同步。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 如何导出我的数据？</div>
+            <div class="faq-answer">A: Pro 版用户可以在设置页面选择「导出 PDF」或「导出 JSON」来备份数据。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 免费版有什么限制？</div>
+            <div class="faq-answer">A: 免费版限制为每天3条记录，总量30条上限，只能查看最近7天的历史记录。升级到 Pro 版即可解锁全部功能。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 如何取消订阅？</div>
+            <div class="faq-answer">A: 您可以在 iPhone 的「设置」>「您的姓名」>「订阅」中管理或取消订阅。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 支持哪些设备？</div>
+            <div class="faq-answer">A: 本应用支持 iOS 17.0 及以上版本的 iPhone 和 iPad。</div>
+        </div>
+
+        <h2>联系我们</h2>
+        <p>如果您有任何问题、建议或反馈，请通过以下方式联系我们：</p>
+        <p>邮箱：<a href="mailto:pangtong@qq.com" class="contact">pangtong@qq.com</a></p>
+        <p>工作时间：周一至周五 9:00-18:00（北京时间）</p>
+
+        <h2>隐私政策</h2>
+        <p>请参阅我们的 <a href="privacy.html" class="contact">隐私政策</a> 了解更多关于数据保护的信息（当前版本：v1.0，最后更新：2026年7月18日）。</p>
     </div>
 
-    <div class="feature-box">
-        <div class="feature-title">📅 日历视图</div>
-        <p>在「日历」页面以日历形式浏览您的所有记录，轻松回顾过去的美好时光。</p>
+    <div data-lang="en">
+        <h1>Help & Support</h1>
+        <p>Welcome to the Good Things Help Center! Here you'll find user guides, FAQs, and contact information.</p>
+
+        <h2>Features</h2>
+        <div class="feature-box">
+            <div class="feature-title">📝 Record Good Things</div>
+            <p>Record one good thing every day in just 3 seconds. Tap the blue plus button in the bottom-right corner of the home screen and enter your content.</p>
+        </div>
+        <div class="feature-box">
+            <div class="feature-title">📊 Review & Stats</div>
+            <p>View your recording statistics on the "Review" page, including mood distribution, streak days, monthly trends, and more data visualizations.</p>
+        </div>
+        <div class="feature-box">
+            <div class="feature-title">📅 Calendar View</div>
+            <p>Browse all your records in calendar format on the "Calendar" page, making it easy to look back on beautiful moments from the past.</p>
+        </div>
+        <div class="feature-box">
+            <div class="feature-title">✨ Pro Benefits</div>
+            <p>Upgrade to Pro for unlimited records, iCloud sync, PDF export, home screen widget, and more premium features.</p>
+        </div>
+
+        <h2>FAQ</h2>
+        <div class="faq-item">
+            <div class="faq-question">Q: Is my data safe?</div>
+            <div class="faq-answer">A: Absolutely! All data is stored only on your device. We do not collect or transmit any user data. With iCloud sync enabled, data is synced only through Apple's secure channels.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: How do I export my data?</div>
+            <div class="faq-answer">A: Pro users can choose "Export PDF" or "Export JSON" in Settings to back up their data.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: What are the free version limitations?</div>
+            <div class="faq-answer">A: The free version is limited to 3 records per day, a total of 30 entries, and viewing only the most recent 7 days of history. Upgrade to Pro to unlock all features.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: How do I cancel my subscription?</div>
+            <div class="faq-answer">A: You can manage or cancel your subscription in iPhone Settings > Your Name > Subscriptions.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: What devices are supported?</div>
+            <div class="faq-answer">A: This app supports iPhone and iPad running iOS 17.0 or later.</div>
+        </div>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions, suggestions, or feedback, please contact us at:</p>
+        <p>Email: <a href="mailto:pangtong@qq.com" class="contact">pangtong@qq.com</a></p>
+        <p>Business hours: Monday–Friday, 9:00–18:00 (Beijing Time)</p>
+
+        <h2>Privacy Policy</h2>
+        <p>Please refer to our <a href="privacy.html" class="contact">Privacy Policy</a> for more information about data protection (current version: v1.0, last updated: July 18, 2026).</p>
     </div>
 
-    <div class="feature-box">
-        <div class="feature-title">✨ Pro 版权益</div>
-        <p>升级到 Pro 版可以享受无限记录、iCloud 同步、PDF 导出、桌面小组件等高级功能。</p>
-    </div>
-
-    <h2>常见问题</h2>
-
-    <div class="faq-item">
-        <div class="faq-question">Q: 我的数据安全吗？</div>
-        <div class="faq-answer">A: 非常安全！所有数据仅存储在您的设备上，我们不会收集或传输任何用户数据。开启 iCloud 同步后，数据仅通过 Apple 的安全通道同步。</div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">Q: 如何导出我的数据？</div>
-        <div class="faq-answer">A: Pro 版用户可以在设置页面选择「导出 PDF」或「导出 JSON」来备份数据。</div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">Q: 免费版有什么限制？</div>
-        <div class="faq-answer">A: 免费版限制为每天2条记录，只能查看最近7天的历史记录。升级到 Pro 版即可解锁全部功能。</div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">Q: 如何取消订阅？</div>
-        <div class="faq-answer">A: 您可以在 iPhone 的「设置」>「您的姓名」>「订阅」中管理或取消订阅。</div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">Q: 支持哪些设备？</div>
-        <div class="faq-answer">A: 本应用支持 iOS 17.0 及以上版本的 iPhone。iPad 版本正在开发中。</div>
-    </div>
-
-    <h2>联系我们</h2>
-    <p>如果您有任何问题、建议或反馈，请通过以下方式联系我们：</p>
-    <p>邮箱：<a href="mailto:pongtom@qq.com" class="contact">pongtom@qq.com</a></p>
-    <p>工作时间：周一至周五 9:00-18:00（北京时间）</p>
-
-    <h2>隐私政策</h2>
-    <p>请参阅我们的 <a href="privacy.html" class="contact">隐私政策</a> 了解更多关于数据保护的信息。</p>
+    <script>
+        function switchLang(lang) {
+            document.body.className = lang === 'en' ? 'lang-en' : '';
+            document.getElementById('btn-zh').className = lang === 'zh' ? 'active' : '';
+            document.getElementById('btn-en').className = lang === 'en' ? 'active' : '';
+            document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+        }
+        var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        if (!browserLang.startsWith('zh')) {
+            switchLang('en');
+        } else {
+            switchLang('zh');
+        }
+    </script>
 </body>
 </html>
